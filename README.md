@@ -1,2 +1,2 @@
-# Social meia repo
+# Social Media Platform
  

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="./signup.css">
+</head>
+
+<body>
+
+    <div class="login">
+        <form action="./staff" name="form1" method="post" class="login__form">
+            <h1 class="login__title">Sign Up</h1>
+
+            <div class="login__inputs">
+                <div class="login__box">
+                    <input placeholder=" Full Name" class="login__input" id="name" type="text" name="name" required>
+                    <i class="fa-regular fa-user"></i>
+                </div>
+
+                <div class="login__box">
+                    <input type="number" name="phoneno" placeholder="Phone No" class="login__input" id="number"
+                        required>
+                    <i class="fa-regular fa-envelope"></i>
+                </div>
+
+                <div class="login__box">
+                    <input type="email" name="email" placeholder="Email ID" class="login__input" id="email" required>
+                    <i class="fa-regular fa-envelope"></i>
+                </div>
+
+
+                <div class="login__box">
+                    <input type="password" name="password" placeholder="Password" class="login__input" id="password"
+                        required>
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+
+            </div>
+
+            <button type="submit" class="login__button" id="sumbit" value="submit">Sign Up</button>
+            <button type="reset" class="login__button" value="reset">Reset</button>
+
+            <div class="login__register">
+                Already have an account?<a href="/login">Sign In</a>
+            </div>
+        </form>
+    </div>
+
+</body>
+<script>
+// Define a function to validate staff login with college Gmail
+function validateStaffLogin() {
+    // Get the value entered in the email input field
+    const emailInput = document.getElementById('email').value.trim();
+
+    // Regular expression to match Gmail addresses belonging to the college domain
+    const collegeGmailRegex = /^[a-zA-Z0-9._%+-]+@college\.edu$/;
+
+    // Check if the email matches the college Gmail format
+    if (collegeGmailRegex.test(emailInput)) {
+        // If email matches, return true indicating valid login
+        return true;
+    } else {
+        // If email does not match, display an error message
+        document.getElementById('error-message').innerText = "Please use a college Gmail address.";
+        // Return false indicating invalid login
+        return false;
+    }
+}
+
+// Add an event listener to the form submission
+document.getElementById('login-form').addEventListener('submit', function(event) {
+    // Prevent the default form submission behavior
+    event.preventDefault();
+
+    // Call the validateStaffLogin function to validate the staff's email
+    const isValidLogin = validateStaffLogin();
+
+    // If login is valid, proceed with the login process
+    if (isValidLogin) {
+        // Proceed with your login logic, such as submitting the form
+        document.getElementById('login-form').submit();
+    }
+});
+</script>
+</html>

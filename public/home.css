@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital@1&display=swap');
+
+body{
+    background-image: url("https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjU0NmJhdGNoMy1teW50LTM0LWJhZGdld2F0ZXJjb2xvcl8xLmpwZw.jpg");
+    background-size: cover;
+}
+
+.box{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding-top: 20%;
+}
+
+h1{
+    justify-content: center;
+    align-items: center;
+}
+
+h1 a{
+    font-family: "Noto Serif";
+    color: black;
+    text-decoration:none;
+    font-size: 60px;
+}

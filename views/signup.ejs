@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="./signup.css">
+</head>
+
+<body>
+
+    <!-- <h2>SignUp</h2>
+    <form action="/signup" method="post">
+        <input type="text" name="name" placeholder="Name">
+        <input type="email" name="email" placeholder="email">
+        <input type="password" name="password" placeholder="Password">
+        <input type="submit">
+    </form>
+    <a href="./login">Login Page</a> -->
+
+    <div class="login">
+        <form action="./signup" name="form1" method="post" class="login__form">
+            <h1 class="login__title">Sign Up</h1>
+
+            <div class="login__inputs">
+                <div class="login__box">
+                    <input placeholder=" Full Name" class="login__input" id="name" type="text" name="name" required>
+                    <i class="fa-regular fa-user"></i>
+                </div>
+
+                <div class="login__box">
+                    <input type="number" name="phoneno" placeholder="Phone No" class="login__input" id="number"
+                        required>
+                    <i class="fa-regular fa-envelope"></i>
+                </div>
+
+                <div class="login__box">
+                    <input type="email" name="email" placeholder="Email ID" class="login__input" id="email" required>
+                    <i class="fa-regular fa-envelope"></i>
+                </div>
+
+
+                <div class="login__box">
+                    <input type="password" name="password" placeholder="Password" class="login__input" id="password"
+                        required>
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+
+                <div class="login__box">
+                    <input type="file" id="myFile" name="filename">
+                    <i class="fa-regular fa-envelope"></i>
+                </div>
+            </div>
+
+            <button type="submit" class="login__button" id="sumbit" value="submit">Sign Up</button>
+            <button type="reset" class="login__button" value="reset">Reset</button>
+
+            <div class="login__register">
+                Already have an account?<a href="/login">Sign In</a>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>
